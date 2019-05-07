@@ -1,0 +1,64 @@
+
+.conteiner {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid transparent
+}
+.item {
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  padding: 50px 0
+}
+.item img {
+  width: 300px;
+  margin-bottom: 50px;
+}
+.item p {
+  width: 300px;
+  margin: 0 auto
+}
+.btn {
+  display: inline-block;
+  margin: 0 auto;
+  width: 50px;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px
+}
+.actionBtn {
+  text-align: center;
+  margin-top: 50px;
+}
+.carusel_wrapper {
+  display: flex;
+  transition: .5s;
+  position: relative;
+  z-index: 1;
+  height: 100%; 
+}
+.dots {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: rgb(153, 152, 152);
+  border-radius: 50%;
+  margin-right: 10px;
+  transform: translateY(-3px);
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.active {
+  background: #000;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-6px)
+}
+
+.prev {
+  margin-right: 10px;
+}
