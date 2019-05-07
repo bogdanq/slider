@@ -1,13 +1,16 @@
 const slider = new Slider({
 	slideToShow: 3,
-	arrow: true,
+	showDots: true,
+	slideToScroll: 1,
+	speed: 600,
 	element: document.querySelector('.js_slick'),
 	responsive: [
 		{
 			breakpoint: 768,
 			setting: {
 				slideToShow: 2,
-				arrow: true
+				showDots: true,
+				slideToScroll: 2
 			}
 		},
 

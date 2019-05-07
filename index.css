@@ -35,7 +35,6 @@
 }
 .carusel_wrapper {
   display: flex;
-  transition: .5s;
   position: relative;
   z-index: 1;
   height: 100%; 
