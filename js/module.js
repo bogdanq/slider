@@ -120,9 +120,9 @@ class Slider {
 	}
 
 	createDots = () => {
-		this.countDots = Math.ceil((this.item.length - this.setting.slideToShow ) / this.setting.slideToScroll)
+		this.countDots = this.item.length / this.setting.slideToScroll
 
-		for (let i = 0; i <= this.countDots; i++) {
+		for (let i = 0; i < this.countDots; i++) {
 			let parent = this.wrapper.parentNode.querySelector('.prev')
 			let btn = document.createElement('div')
 			btn.className = 'dots'
@@ -134,7 +134,7 @@ class Slider {
 
 	getActiveDots = () => {
 		this.dots = this.wrapper.parentNode.querySelectorAll('.dots')
-		for (let i = 0; i <= this.countDots; i++) {
+		for (let i = 0; i < this.countDots; i++) {
 			this.dots[i].classList.remove('active')
 		}
 
@@ -143,12 +143,12 @@ class Slider {
 
 	checkActiveDots = (direction) => {
 		if(direction) {
-			this.activeDots >= this.countDots
+			this.activeDots >= this.countDots - 1
 				? this.activeDots = 0 
 				: this.activeDots = this.activeDots + 1
 		} else {
 			this.activeDots <= 0 
-				? this.activeDots = this.countDots
+				? this.activeDots = this.countDots - 1
 				: this.activeDots = this.activeDots - 1
 		}
 	}
